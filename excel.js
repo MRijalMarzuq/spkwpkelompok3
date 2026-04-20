@@ -11,7 +11,7 @@ function downloadTemplate() {
     const ws = XLSX.utils.aoa_to_sheet(templateData);
     const wb = XLSX.utils.book_new();
     XLSX.utils.book_append_sheet(wb, ws, "Data_SPK");
-    XLSX.writeFile(wb, "template_spk_wp.xlsx");
+    XLSX.writeFile(wb, "template_spk_wpkel3.xlsx");
 }
 
 function uploadTemplate(event) {
