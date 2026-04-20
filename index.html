@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modul Praktikum SPK - Metode WP</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js"></script>
+</head>
+<body>
+    <div class="container">
+
+        <!-- HEADER -->
+        <div class="header-wrapper">
+            <div class="header-title">
+                <h1>&#127979; Sistem Pendukung Keputusan</h1>
+                <p>
+                    <small><b>Program Studi D4 Sistem Informasi Kota Cerdas</b></small><br>
+                    <small><b>Politeknik Negeri Indramayu</b></small><br>
+                    <small><i>Deployed by Kelompok 3</i></small>
+                </p>
+            </div>
+            <img src="logo.png" alt="Logo Polindra" class="header-logo" onerror="this.style.display='none'">
+        </div>
+        <div class="gold-bar"></div>
+
+        <!-- TOOLBAR -->
+        <div class="toolbar">
+            <button onclick="downloadTemplate()">&#11015; Download Template</button>
+            <label class="btn-upload">
+                &#11014; Upload Template
+                <input type="file" id="fileUpload" accept=".xlsx, .xls" onchange="uploadTemplate(event)" style="display:none;">
+            </label>
+
+            <div id="dynamicTools">
+                <button id="btnHitung" onclick="processWP()" class="btn-primary" disabled>&#9654; Hitung Hasil WP</button>
+                <button onclick="tambahKriteria()" style="background:#27ae60;color:white;border:none;">&#43; Kriteria</button>
+                <button onclick="tambahAlternatif()" style="background:#e67e22;color:white;border:none;">&#43; Alternatif</button>
+                <button onclick="resetData()" class="btn-danger">&#8635; Reset Data</button>
+            </div>
+        </div>
+
+        <!-- MAIN CONTENT -->
+        <div class="main-content">
+
+            <!-- LOADING -->
+            <div id="loadingBarContainer">
+                <p>&#9881; Memproses Perhitungan WP...</p>
+                <div class="progress-container">
+                    <div id="progressBar" class="progress-bar"></div>
+                </div>
+            </div>
+
+            <!-- TABLE & RESULT -->
+            <div id="dataTableContainer">
+                <p class="placeholder-text">
+                    &#128196; Silakan <strong>upload template Excel (.xlsx)</strong> atau <strong>download template</strong> terlebih dahulu.
+                </p>
+            </div>
+
+            <div id="resultContainer"></div>
+
+        </div>
+
+        <div class="footer-stripe"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
