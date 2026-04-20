@@ -6,7 +6,7 @@ const templateData = [
     ["SMA Negeri 2 Indramayu", 1200000, 1, 1, 8.5, 3, 9],
     ["SMA Negeri 1 Sindang", 2300000, 5, 5, 10.2, 5, 15],
     ["SMA Negeri 1 Karangampel", 2000000, 4, 3, 31.5, 4, 10],
-    ["SMA Negeri 1 Santa Maria", 1500000, 4, 4, 45, 4, 15],
+    ["SMA Negeri 1 Anjatan", 1500000, 4, 4, 45, 4, 15],
     ["SMA Negeri 1 Lohbener", 1000000, 3, 4, 1.3, 3, 15],
     ["SMA 1 Sliyeg", 1500000, 3, 3, 13.7, 3, 13],
 ];
